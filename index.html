@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>InvertAvatar's Project Page</title>
+<!-- Bootstrap -->
+<link href="./css/bootstrap-4.0.0.css" rel="stylesheet">
+</head>
+<body>
+<div id="page_container">
+<header>
+  <div class="jumbotron" >
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h2 class="text-center">InvertAvatar: Incremental GAN Inversion  <br> for Generalized Head Avatars</h2>
+          <p class="text-center">&nbsp;</p>
+          <h6 class="text-center"> <a href="https://xiaochen-zhao.netlify.app/">Xiaochen Zhao*</a>, <a href="https://mrtornado24.github.io/">Jingxiang Sun*</a>, <a href="https://lizhenwangt.github.io/">Lizhen Wang</a>, Jinli Suo, and <a href="http://www.liuyebin.com/">Yebin Liu</a></h6>
+
+          <p class="text-center">Tsinghua University</p>
+          <h5 class="text-center">Arxiv 2023 </h5>
+          <hr>
+          <p class="text-center" style="font-size:20px">
+          <a href="https://arxiv.org/abs/2312.02222">[Paper]</a>
+          <a href="https://www.youtube.com/watch?v=Vb7coZUIxB0">[Video]</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<section>
+  <div class="container">
+    <p>&nbsp;</p>
+    <div class="row">
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xl-12 text-center">
+        <h2>Abstract</h2>
+      </div>
+    </div>
+  </div>
+  <div class="container ">
+
+    <div class="row">
+      <div class="col-lg-12 col-md-12 col-sm-12 text-center offset-xl-1 col-xl-10">
+        <p class="text-left"><em>While high fidelity and efficiency are central to the creation of digital head avatars, recent methods relying on 2D or 3D generative models often experience limitations such as shape distortion, expression inaccuracy, and identity flickering. Additionally, existing one-shot inversion techniques fail to fully leverage multiple input images for detailed feature extraction. We propose a novel framework, \textbf{Incremental 3D GAN Inversion}, that enhances avatar reconstruction performance using an algorithm designed to increase the fidelity from multiple frames, resulting in improved reconstruction quality proportional to frame count. Our method introduces a unique animatable 3D GAN prior with two crucial modifications for enhanced expression controllability alongside an innovative neural texture encoder that categorizes texture feature spaces based on UV parameterization. Differentiating from traditional techniques, our architecture emphasizes pixel-aligned image-to-image translation, mitigating the need to learn correspondences between observation and canonical spaces. Furthermore, we incorporate ConvGRU-based recurrent networks for temporal data aggregation from multiple frames, boosting geometry and texture detail reconstruction. The proposed paradigm demonstrates state-of-the-art performance on one-shot and few-shot avatar animation tasks. </em></p>
+        <p class="text-left">&nbsp;</p>
+        <p class="text-left">&nbsp;</p>
+        <img src="assets/teaser.png" width="880" height="440" alt=""/>
+<!--        <p>Fig 1. The overview of our parametric-model-based Neural Head Avatar.</p>-->
+        <p class="text-center">Fig 1. Given single or more source images, our method rapidly reconstructs photorealistic 3D facial avatars under one second, enabling precise control over full-head rotations and subtle expressions like lopsided grins and eye gazes.</p>
+        <p>&nbsp;</p>
+      </div>
+    </div>
+<!--    <div class="row">-->
+<!--      <div class="col-lg-12 col-md-12 col-sm-12 text-center offset-xl-1 col-xl-10"> -->
+<!--	    <img src="assets/teaser.png" width="880" height="440" alt=""/>-->
+<!--        <p>&nbsp;</p>-->
+<!--        <p class="text-center">Fig 1. Given single or more source images, our method rapidly reconstructs photorealistic 3D facial avatars under one second, enabling precise control over full-head rotations and subtle expressions like lopsided grins and eye gazes.</p>-->
+<!--        <p>&nbsp;</p>-->
+<!--        <p>&nbsp;</p>-->
+<!--      </div>-->
+<!--    </div>-->
+    <hr>
+    <div class="row">
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xl-12 text-center">
+        <h2>Results </h2>
+        <p>&nbsp;</p>
+      </div>
+    </div>
+<!--    <div class="row">-->
+<!--      <div class="col-lg-12 col-md-12 col-sm-12 text-center offset-xl-1 col-xl-10"> <img src="assets/pipeline.png" width="800" alt=""/>-->
+<!--        <p>&nbsp;</p>-->
+<!--        <p class="text-center">Fig 2. Our avatar reconstruction pipeline, applicable to a single or multi-image sequence, comprises coarse-to-fine two stages. The architecture of our advanced animatable 3D generative model is depicted in the right box.</p>-->
+<!--        <p>&nbsp;</p>-->
+<!--      </div>-->
+<!--    </div>-->
+
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xl-12 text-center">
+      <video controls="controls" width="1024" height="768" autoplay="autoplay" muted="muted">
+        <source src="./assets/video_generalize_.mp4" type="video/mp4">
+      </video>
+      <p>&nbsp;</p>
+    </div>
+
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xl-12 text-center">
+      <video controls="controls" width="1024" height="576" autoplay="autoplay" muted="muted">
+        <source src="./assets/os_case1_.mp4" type="video/mp4">
+      </video>
+      <p>&nbsp;</p>
+    </div>
+
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xl-12 text-center">
+      <video controls="controls" width="1024" height="576" autoplay="autoplay" muted="muted">
+        <source src="./assets/os_case2_.mp4" type="video/mp4">
+      </video>
+      <p>&nbsp;</p>
+    </div>
+
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xl-12 text-center">
+      <video controls="controls" width="1024" height="576" autoplay="autoplay" muted="muted">
+        <source src="./assets/fs_case1_.mp4" type="video/mp4">
+      </video>
+      <p>&nbsp;</p>
+    </div>
+
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xl-12 text-center">
+      <video controls="controls" width="1024" height="576">
+        <source src="./assets/fs_case2_.mp4" type="video/mp4">
+      </video>
+      <p>&nbsp;</p>
+    </div>
+
+    <hr>
+    <div class="row">
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xl-12 text-center">
+        <h2>Technical Paper</h2>
+      </div>
+    </div>
+<!--    <div class="col-lg-12 col-md-12 col-sm-12 col-xl-12 text-center"> <a href="assets/Invert_Avatar_arxiv.pdf"><img src="assets/paper.png" width="1000" alt=""/></a>-->
+<!--      <p>&nbsp;</p>-->
+<!--    </div>-->
+    <hr>
+    <div class="row">
+      <div class="col-lg-12 mb-4 mt-2 text-center">
+        <h2>Demo Video</h2>
+      </div>
+    </div>
+<!--    <div class="col-lg-12 col-md-12 col-sm-12 col-xl-12 text-center">-->
+<!--      <video controls="controls" width="1024" height="768">-->
+<!--        <source src="./assets/supp_video.mp4" type="video/mp4">-->
+<!--      </video>-->
+<!--      <p>&nbsp;</p>-->
+<!--    </div>-->
+    <iframe width="1024" height="768" src="https://www.youtube.com/embed/Vb7coZUIxB0?si=5xJBAUud5HIkz_QG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+	<hr>
+    <div class="row">
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xl-12 text-center">
+        <h2>Citation</h2>
+      </div>
+    </div>
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xl-12 text-left">
+      <p>&nbsp;</p>
+      <div class="container ">
+      <p><span style="color:#000000;font-family:'Courier New';font-size:15px;">
+        <div class="jumbotron">
+        @article{zhao2023invertavatar,<br>
+        title={InvertAvatar: Incremental GAN Inversion for Generalized Head Avatars},<br>
+        author={Zhao, Xiaochen and Sun, Jingxiang and Wang, Lizhen and Suo, Jinli and Liu, Yebin},<br>
+        journal={arXiv preprint arXiv:2312.02222},<br>
+        year={2023}<br>
+}
+    </div>
+    </span></p>
+    </div>
+  </div>
+    <div class="row"> </div>
+  </div>
+  
+	<hr>
+  <div class="row">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xl-12 text-center">
+    <h2>Acknowlegements</h2>
+  </div>
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xl-12 text-left">
+      <p>&nbsp;</p>
+      <div class="container ">
+      This paper is supported by National Key R&D Program of China (2022YFF0902200), the NSFC project No.62125107 and No.61827805.
+    </div>
+      <p>&nbsp;</p>
+    </div>
+  </div>
+</section>	
+</div>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+<script src="./js/jquery-3.2.1.min.js"></script> 
+<!-- Include all compiled plugins (below), or include individual files as needed --> 
+<script src="./js/popper.min.js"></script> 
+<script src="./js/bootstrap-4.0.0.js"></script>
+</body>
+</html>
